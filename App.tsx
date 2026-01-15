@@ -25,17 +25,26 @@ import Experience from "./components/Experience";
 import LoadingScreen from "./components/LoadingScreen";
 import { Project, ExperienceItem } from "./types";
 
-// 1. UPDATE YOUR SOCIAL LINKS HERE
+// @ts-expect-error - TypeScript doesn't recognize image imports by default
+import profileImg from "./assets/selfie_website.jpeg";
+
+// @ts-expect-error
+import orbitalImg from "./assets/orbitalMesh.png";
+
+// @ts-expect-error
+import carTestImg from "./assets/carTest.png";
+
+// @ts-expect-error
+import robotImg from "./assets/robotCompanion.png";
+
 const SOCIAL_LINKS = {
   github: "https://github.com/AryanG2020",
   linkedin: "https://www.linkedin.com/in/aryan-gurubacharya/",
   email: "mailto:aryan.gurubacharya@gmail.com",
 };
 
-// Placeholder Image - Replace with your own URL
-const PROFILE_IMAGE = "./assets/selfie_website.jpeg";
+const PROFILE_IMAGE = profileImg;
 
-// Resume Data
 const PROJECTS: Project[] = [
   {
     id: 1,
@@ -48,9 +57,9 @@ const PROJECTS: Project[] = [
       "Graph Theory",
       "Distributed Systems",
     ],
-    // 2. Add specific project links below
+
     link: "https://github.com/AryanG2020/Orbital-Mesh-Simulator",
-    image: "./assets/orbitalMesh.png",
+    image: orbitalImg,
   },
   {
     id: 2,
@@ -89,7 +98,7 @@ const PROJECTS: Project[] = [
       "TigerMart is an e-commerce Android application tailored for DePauw University students, offering a convenient platform to purchase essential goods, academic materials, and dormitory supplies. Built using Java, the app features secure user authentication and registration powered by Firebase Authentication, ensuring data safety.",
     tags: ["Salesforce", "APEX", "AgentForce", "Chatbot"],
     link: "https://github.com/AryanG2020/Car-Services-",
-    image: "./assets/carTest.png",
+    image: carTestImg,
   },
   {
     id: 6,
@@ -98,7 +107,7 @@ const PROJECTS: Project[] = [
       " An interactive 3D background featuring a swarm of physics-enabled robots that organically track the user's cursor and interact with one another, built using React Three Fiber.",
     tags: ["Typescript", "React", "Three.js", "Motion Physics"],
     link: "https://github.com/AryanG2020/RobotComponent",
-    image: "./assets/robotCompanion.png",
+    image: robotImg,
   },
 ];
 
