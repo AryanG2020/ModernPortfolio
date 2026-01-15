@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+/* Define your custom theme variables here */
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  
+  --color-accent: #00f3ff;
+  --color-secondary: #7000ff;
+  --color-dark: #050505;
+  --color-glass: rgba(255, 255, 255, 0.05);
+}
+
+/* Your custom global styles */
+body {
+  margin: 0;
+  background-color: var(--color-dark);
+  color: white;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark); 
+}
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent); 
+}
+
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.canvas-container canvas {
+  pointer-events: auto;
+}
